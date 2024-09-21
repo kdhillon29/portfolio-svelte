@@ -4,7 +4,7 @@
 
 <!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
 
-<div class="container h-full flex justify-start align-middle">
+<div class="container w-full h-full mx-auto">
 	<!-- <h1>Welcome to My Portfolio!</h1> -->
 	<Hero />
 </div>

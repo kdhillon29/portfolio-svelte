@@ -9,12 +9,15 @@
 	import Socials from './Socials.svelte';
 
 	let ready = false;
+	import ProfileImg from '$lib/assets/design3.png?enhanced';
 	onMount(() => (ready = true));
 </script>
 
-<div class=" grid md:grid-cols-2 relative md:px-12">
+<div class="   grid md:grid-cols-2 md:w-[90%] mx-auto md:gap-12">
 	{#if ready}
-		<div class=" flex flex-col gap-2 p-2">
+		<div
+			class="  flex flex-col gap-3 md:gap-8 p-2 max-sm:bg-[url('/assets/images/waves.svg')] bg-cover bg-left"
+		>
 			<div
 				transition:fly={{
 					delay: 250,
@@ -24,8 +27,14 @@
 					opacity: 0,
 					easing: quintOut
 				}}
-				class="  mx-auto relative"
+				class=" "
 			>
+				<!-- <h1 transition:fly="{{ delay: 250, duration: 3000, x: -200, y: 500, opacity: 0.5, easing: quintOut }}" >Welcome to Kanwar DHillon Portfolio</h1> -->
+
+				<p class="text-primary-200 md:text-5xl text-3xl tracking-tight my-4">
+					HEY, I AM <br />
+					<span class="text-primary-500">Kanwar Dhillon</span>
+				</p>
 				<div class="text-3xl font-semibold text-secondary-100">
 					<Typewriter {...{ mode: 'loop', element: 'b' }}>
 						<b> Front-End </b>
@@ -34,12 +43,6 @@
 						<b> NodeJs </b>
 					</Typewriter>
 				</div>
-				<!-- <h1 transition:fly="{{ delay: 250, duration: 3000, x: -200, y: 500, opacity: 0.5, easing: quintOut }}" >Welcome to Kanwar DHillon Portfolio</h1> -->
-
-				<p class="text-primary-200 md:text-5xl text-3xl tracking-tight my-4">
-					HEY, I AM <br />
-					<span class="text-primary-500">Kanwar Dhillon</span>
-				</p>
 			</div>
 			<div transition:fade={{ delay: 1000, duration: 2000 }}>
 				<p class="text-secondary-100 md:text-2xl text-lg tracking-wide leading-6">
@@ -48,8 +51,8 @@
 			</div>
 			<div
 				transition:scale={{
+					delay: 1500,
 					duration: 2000,
-					delay: 500,
 					opacity: 0,
 					start: 0.5,
 					easing: quintOut
@@ -57,6 +60,19 @@
 			>
 				<Socials />
 			</div>
+		</div>
+		<div
+			class=" hidden md:block mt-[-10px]"
+			transition:scale={{
+				delay: 1500,
+				duration: 1000,
+				opacity: 0.8,
+				start: 0.9,
+				easing: quintOut
+			}}
+		>
+			<enhanced:img width="500" height="500" src={ProfileImg} alt="some alt text" />
+			<!-- <img src="./images/profpic.png" class="w-[300px] md:w-[450px]" alt="profile" /> -->
 		</div>
 	{/if}
 </div>
@@ -163,4 +179,4 @@
             <ShinyEffect left={0} top={0} size={1400} />
         </div> -->
 
-<!-- </div> --> -->
+<!-- </div> -->
