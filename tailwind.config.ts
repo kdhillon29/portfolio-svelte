@@ -12,7 +12,7 @@ export default {
 	theme: {
 		extend: {
 			fontSize: {
-				clamp: 'clamp(1rem, 2.5vw, 3rem)'
+				clamp: 'clamp(1rem, 3vw, 2rem)'
 			}
 		}
 	},

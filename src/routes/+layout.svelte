@@ -25,7 +25,9 @@
 	let innerHeight = 0;
 
 	function goTop() {
-		document.body.scrollIntoView();
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+
+		// document.body.scrollIntoView();
 	}
 
 	initializeStores();
@@ -34,19 +36,17 @@
 <div
 	class="container relative flex flex-col md:gap-6 max-w-[1400px] mx-auto w-full text-sm sm:text-base min-h-screen"
 >
-	<!-- <div
-        class={"fixed bottom-0 w-full  duration-200 flex p-10 z-[10] " +
-            (y > 0
-                ? " opacity-full pointer-events-auto"
-                : " pointer-events-none opacity-0")}
-    >
-        <button
-            on:click={goTop}
-            class="ml-auto rounded-full bg-slate-900 text-violet-400 px-3 sm:px-4 hover:bg-slate-800 cursor-pointer aspect-square grid place-items-center"
-        >
-            <i class="fa-solid fa-arrow-up" />
-        </button>
-    </div> -->
+	<div
+		class={'fixed bottom-0 w-full  duration-200 flex p-10 z-[10] ' +
+			(y > 0 ? ' opacity-full pointer-events-auto' : ' pointer-events-none opacity-0')}
+	>
+		<button
+			on:click={goTop}
+			class="ml-auto rounded-full bg-slate-900 text-violet-400 px-3 sm:px-4 hover:bg-slate-800 cursor-pointer aspect-square grid place-items-center"
+		>
+			<i class="fa-solid fa-arrow-up" />
+		</button>
+	</div>
 
 	<Header {y} />
 	<Drawer>
