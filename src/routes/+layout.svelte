@@ -37,7 +37,7 @@
 	class="container relative flex flex-col md:gap-6 max-w-[1400px] mx-auto w-full text-sm sm:text-base min-h-screen"
 >
 	<div
-		class={'fixed bottom-0 w-full  duration-200 flex p-10 z-[10] ' +
+		class={'fixed bottom-10 right-0  w-28  duration-200 flex p-2 z-[10] ' +
 			(y > 0 ? ' opacity-full pointer-events-auto' : ' pointer-events-none opacity-0')}
 	>
 		<button
@@ -52,7 +52,7 @@
 	<Drawer>
 		<Navigation />
 	</Drawer>
-	<div class="flex-1"><slot /></div>
+	<slot />
 	<Footer />
 </div>
 <svelte:window bind:scrollY={y} bind:innerHeight bind:innerWidth />
