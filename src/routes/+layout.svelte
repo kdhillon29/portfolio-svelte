@@ -1,5 +1,6 @@
 <script lang="ts">
 	import '../app.postcss';
+	import Navigation from '$lib/Navigation/Navigation.svelte';
 
 	// Highlight JS
 	import hljs from 'highlight.js/lib/core';
@@ -18,6 +19,7 @@
 	import Footer from '../components/Footer.svelte';
 	import Header from '../components/Header.svelte';
 
+	import { initializeStores, Drawer } from '@skeletonlabs/skeleton';
 	let y: number;
 	let innerWidth = 0;
 	let innerHeight = 0;
@@ -25,6 +27,8 @@
 	function goTop() {
 		document.body.scrollIntoView();
 	}
+
+	initializeStores();
 </script>
 
 <div
@@ -43,7 +47,11 @@
             <i class="fa-solid fa-arrow-up" />
         </button>
     </div> -->
+
 	<Header {y} />
+	<Drawer>
+		<Navigation />
+	</Drawer>
 	<div class="flex-1"><slot /></div>
 	<Footer />
 </div>

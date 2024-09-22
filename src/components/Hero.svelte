@@ -10,59 +10,91 @@
 
 	let ready = false;
 	import ProfileImg from '$lib/assets/design3.png?enhanced';
+	import internal from 'stream';
 	onMount(() => (ready = true));
 </script>
 
-<div class="   grid md:grid-cols-2 md:w-[90%] mx-auto md:gap-12">
+<div class="   grid md:grid-cols-2 md:w-[90%] text-clamp mx-auto md:gap-12">
 	{#if ready}
 		<div
-			class="  flex flex-col gap-3 md:gap-8 p-2 max-sm:bg-[url('/assets/images/waves.svg')] bg-cover bg-left"
+			class=" max-sm:bg-gradient-to-tr from-primary-900 to-secondary-900 bg-blend-overlay hover:mix-blend-overlay"
 		>
 			<div
-				transition:fly={{
-					delay: 250,
-					duration: 2000,
-					x: -100,
-					y: -200,
-					opacity: 0,
-					easing: quintOut
-				}}
-				class=" "
+				class="  flex flex-col p-2 gap-4 md:gap-12 max-sm:ml-auto max-sm:bg-[url('/assets/images/waves.svg')] bg-cover bg-left"
 			>
-				<!-- <h1 transition:fly="{{ delay: 250, duration: 3000, x: -200, y: 500, opacity: 0.5, easing: quintOut }}" >Welcome to Kanwar DHillon Portfolio</h1> -->
+				<div
+					transition:fly={{
+						delay: 250,
+						duration: 2000,
+						x: -100,
+						y: -200,
+						opacity: 0,
+						easing: quintOut
+					}}
+					class=" "
+				>
+					<!-- <h1 transition:fly="{{ delay: 250, duration: 3000, x: -200, y: 500, opacity: 0.5, easing: quintOut }}" >Welcome to Kanwar DHillon Portfolio</h1> -->
 
-				<p class="text-primary-200 md:text-5xl text-3xl tracking-tight my-4">
-					HEY, I AM <br />
-					<span class="text-primary-500">Kanwar Dhillon</span>
-				</p>
-				<div class="text-3xl font-semibold text-secondary-100">
-					<Typewriter {...{ mode: 'loop', element: 'b' }}>
-						<b> Front-End </b>
-						<b> JavaScript </b>
-						<b> HTML5,CSS3 </b>
-						<b> NodeJs </b>
-					</Typewriter>
+					<div class="text-primary-200 w-full tracking-tight md:tracking-wide">
+						<p>
+							HEY, I AM <br />
+							<span class=" text-primary-600 font-semibold border-b-2 border-secondary-200"
+								>Kanwar Dhillon</span
+							>
+						</p>
+					</div>
 				</div>
-			</div>
-			<div transition:fade={{ delay: 1000, duration: 2000 }}>
-				<p class="text-secondary-100 md:text-2xl text-lg tracking-wide leading-6">
-					I am a passionate fullstack developer with over 5 years of experience.
-				</p>
-			</div>
-			<div
-				transition:scale={{
-					delay: 1500,
-					duration: 2000,
-					opacity: 0,
-					start: 0.5,
-					easing: quintOut
-				}}
-			>
-				<Socials />
+				<div
+					class=" flex flex-col gap-2 w-2/3 md:w-3/4"
+					transition:fade={{ delay: 1000, duration: 2000 }}
+				>
+					<Typewriter {...{ mode: 'loop', element: 'b', delay: 100 }}>
+						<b> HTML5,CSS3</b>
+						<b> JavaScript </b>
+						<b> Reactjs </b>
+						<b> NextJs </b>
+						<b> SvelteKit </b>
+						<b> NodeJs </b>
+						<b> TailwindCSS</b>
+						<b> Figma</b>
+					</Typewriter>
+					<p class="  text-secondary-100 tracking-wide leading-6">
+						I am a passionate fullstack developer with over 3 years of experience.
+					</p>
+					<span class=" font-semibold text-secondary-100">
+						<Typewriter {...{ mode: 'loop', cursor: false, element: 'span' }}>
+							<span
+								class="bg-gradient-to-br from-blue-500 to-cyan-300 bg-clip-text text-transparent box-decoration-clone"
+								>DESIGN.
+							</span>
+
+							<span
+								class="bg-gradient-to-br from-red-500 to-yellow-500 bg-clip-text text-transparent box-decoration-clone"
+								>BUILD.</span
+							>
+
+							<span
+								class="bg-gradient-to-br from-pink-500 to-violet-500 bg-clip-text text-transparent box-decoration-clone"
+								>DEPLOY.</span
+							>
+						</Typewriter><br />
+					</span>
+				</div>
+				<div
+					transition:scale={{
+						delay: 1500,
+						duration: 2000,
+						opacity: 0,
+						start: 0.8,
+						easing: quintOut
+					}}
+				>
+					<Socials />
+				</div>
 			</div>
 		</div>
 		<div
-			class=" hidden md:block mt-[-10px]"
+			class=" max-sm:hidden flex-shrink mt-[-10px]"
 			transition:scale={{
 				delay: 1500,
 				duration: 1000,
