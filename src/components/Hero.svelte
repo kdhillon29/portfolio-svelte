@@ -35,32 +35,19 @@
 				>
 					<!-- <h1 transition:fly="{{ delay: 250, duration: 3000, x: -200, y: 500, opacity: 0.5, easing: quintOut }}" >Welcome to Kanwar DHillon Portfolio</h1> -->
 
-					<div class="text-primary-300 w-full tracking-tight md:tracking-wide py-2">
+					<div class="text-primary-300 text-md md:text-2xl w-full leading-6 md:tracking-wide p-2">
 						<p>
-							HEY, I AM<br />
+							HEY, I AM<br class="max-sm:hidden" />
 							<span class=" text-primary-600 py-2 font-semibold border-b-2 border-secondary-200"
-								>Kanwar Dhillon</span
+								>Kan Dhillon</span
 							>
 						</p>
 					</div>
 				</div>
 				<div
-					class=" flex flex-col gap-4 md:gap-6 md:w-3/4"
+					class=" flex flex-col gap-2 md:gap-3 md:w-3/4"
 					transition:fade={{ delay: 1000, duration: 2000 }}
 				>
-					<Typewriter {...{ mode: 'loop', element: 'b', delay: 100, unwriteInterval: 50 }}>
-						<b> HTML5,CSS3</b>
-						<b> JavaScript </b>
-						<b> Reactjs </b>
-						<b> NextJs </b>
-						<b> SvelteKit </b>
-						<b> NodeJs </b>
-						<b> TailwindCSS</b>
-						<b> Figma</b>
-					</Typewriter>
-					<p class="  text-secondary-100 text-md md:text-xl tracking-wide leading-6">
-						I am a passionate fullstack developer with over 3 years of experience.
-					</p>
 					<span class=" font-semibold text-secondary-100">
 						<Typewriter {...{ mode: 'loop', cursor: false, element: 'span' }}>
 							<span
@@ -79,6 +66,19 @@
 							>
 						</Typewriter><br />
 					</span>
+					<p class="  text-secondary-100 text-md md:text-xl tracking-wide leading-6">
+						I am a passionate web developer with over 3 years of experience in..
+					</p>
+					<Typewriter {...{ mode: 'loop', element: 'b', delay: 100, unwriteInterval: 50 }}>
+						<b> HTML5,CSS3</b>
+						<b> JavaScript </b>
+						<b> Reactjs </b>
+						<b> NextJs </b>
+						<b> SvelteKit </b>
+						<b> NodeJs </b>
+						<b> TailwindCSS</b>
+						<b> Figma</b>
+					</Typewriter>
 				</div>
 				<div
 					transition:scale={{

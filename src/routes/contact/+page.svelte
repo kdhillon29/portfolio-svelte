@@ -1,27 +1,37 @@
-<script>
+<script lang="ts">
 	import { z } from 'zod';
 
 	import { superForm } from 'sveltekit-superforms';
 	import SuperDebug from 'sveltekit-superforms';
+	import { getToastStore } from '@skeletonlabs/skeleton';
+	import type { ToastSettings } from '@skeletonlabs/skeleton';
+
+	const toastStore = getToastStore();
+
+	// toastStore.trigger(t);
 
 	export let data;
-	const { form, errors, constraints, message } = superForm(data.form);
-	// Client API:
-	// const { form } = superForm(data.form);
+	const { form, errors, constraints, message, enhance } = superForm(data.form);
+	// const t: ToastSettings = {
+	// 	// message: 'We recieve your message and will in touch Shortly.'
+	// 	message: $message
+	// };
+
+	$: $message && toastStore.trigger({ message: $message });
 </script>
 
 <div
 	class=" max-w-6xl max-lg:max-w-3xl mx-auto bg-gradient-to-b from-secondary-900 to-primary-800 rounded-lg"
 >
-	<div class="grid md:grid-cols-2 items-start gap-2 md:gap-12 sm:p-8 p-4">
+	<div class="grid md:grid-cols-2 items-start gap-2 md:gap-12 p-4">
 		<div class="">
-			<h1 class="text-4xl font-bold text-white">Get in Touch</h1>
-			<p class="text-xs md:text-sm text-gray-300 mt-4 leading-relaxed">
+			<h1 class="text-xl md:text-4xl font-bold text-primary-200">Get in Touch</h1>
+			<p class="text-xs md:text-sm text-gray-300 mt-4 tracking-tight leading-3">
 				Have some big idea or brand to develop and need help? Then reach out we'd love to hear about
 				your project and provide help.
 			</p>
 
-			<ul class=" flex flex-col mt-6 gap-2 md:gap-6 md:space-y-2">
+			<ul class=" mt-2 flex flex-wrap md:flex-col gap-2 md;gap-8 justify-between p-2 md:space-y-2">
 				<li class="flex items-center">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -35,7 +45,7 @@
 							data-original="#000000"
 						/>
 					</svg>
-					<a href="#/" class="text-white text-sm ml-4"> info@example.com </a>
+					<a href="#/" class="text-white text-sm ml-1"> info@example.com </a>
 				</li>
 				<li class="flex items-center">
 					<svg
@@ -50,7 +60,7 @@
 							data-original="#000000"
 						></path>
 					</svg>
-					<a href="#/" class="text-white text-sm ml-4"> +158 996 888 </a>
+					<a href="#/" class="text-white text-sm ml-1"> +158 996 888 </a>
 				</li>
 				<li class="flex items-center">
 					<svg
@@ -69,7 +79,7 @@
 							data-original="#000000"
 						></path>
 					</svg>
-					<a href="#/" class="text-white text-sm ml-4"> 123 Street 256 House </a>
+					<a href="#/" class="text-white text-sm ml-2"> 123 Street 256 House </a>
 				</li>
 			</ul>
 
@@ -132,10 +142,13 @@
 		</div>
 
 		<div class="bg-primary-500/70 p-2 md:p-6 rounded-lg w-full">
-			<p class="text-sm font-semibold text-gray-800">Contact Us...</p>
-			{#if $message}<h3>{$message}</h3>{/if}
+			<!-- <h2 class="text-xl md:text-3xl text-center font-semibold text-secondary-200">
+				Contact 
+			</h2> -->
+			<!-- {$message && toastStore.trigger({ message: $message })} -->
+
 			<!-- <SuperDebug data={$form} /> -->
-			<form method="post" class="mt-8 space-y-4 text-secondary-100">
+			<form method="post" use:enhance class="mt-8 space-y-4 text-secondary-100">
 				<input
 					type="text"
 					placeholder="Name"
@@ -166,7 +179,7 @@
 					bind:value={$form.phone}
 					{...$constraints.phone}
 				/>
-				{#if $errors.phone}<span class="invalid">{$errors.phone}</span>{/if}
+				{#if $errors.phone}<span class="invalid text-red-500">{$errors.phone}</span>{/if}
 
 				<input
 					type="text"
@@ -191,7 +204,7 @@
 				{#if $errors.message}<span class="invalid">{$errors.message}</span>{/if}
 				<button
 					type="submit"
-					class="text-white bg-primary-700 hover:bg-primary-300 tracking-wide rounded-lg text-sm mx-auto px-4 py-3 flex items-center justify-center w-4/5 !mt-6"
+					class="text-white bg-primary-700 hover:bg-primary-500 tracking-wide rounded-lg text-sm mx-auto px-4 py-3 flex items-center justify-center w-4/5 !mt-6"
 				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"

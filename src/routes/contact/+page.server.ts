@@ -4,6 +4,8 @@ import { z } from 'zod';
 import validator from 'validator';
 import { message } from 'sveltekit-superforms';
 import { fail } from '@sveltejs/kit';
+import { sendMail } from '$lib/emails/nodeTransporter.js';
+
 // const phoneRegex = new RegExp(/^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/);
 // Define outside the load function so the adapter can be cached
 const schema = z.object({
@@ -26,13 +28,15 @@ export const actions = {
 		console.log(form);
 
 		if (!form.valid) {
-			// Again, return { form } and things will just work.
+			//  return { form } and things will just work.
 			return fail(400, { form });
 		}
 
+		sendMail(form.data);
+
+		return message(form, 'We recieved your message and will contact you shortly!');
 		// TODO: Do something with the validated form.data
 
 		// Display a success status message
-		return message(form, 'Form posted successfully!');
 	}
 };
