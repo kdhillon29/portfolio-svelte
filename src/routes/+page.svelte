@@ -1,6 +1,7 @@
 <script>
 	import Hero from '../components/Hero.svelte';
 	import Skills from '../components/Skills.svelte';
+	// export const ssr = false;
 </script>
 
 <!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->

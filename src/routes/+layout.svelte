@@ -19,7 +19,7 @@
 	import Footer from '../components/Footer.svelte';
 	import Header from '../components/Header.svelte';
 
-	import { initializeStores, Drawer } from '@skeletonlabs/skeleton';
+	import { initializeStores, Drawer, Toast } from '@skeletonlabs/skeleton';
 	let y: number;
 	let innerWidth = 0;
 	let innerHeight = 0;
@@ -53,6 +53,7 @@
 		<Navigation />
 	</Drawer>
 	<slot />
+	<Toast />
 	<Footer />
 </div>
 <svelte:window bind:scrollY={y} bind:innerHeight bind:innerWidth />
