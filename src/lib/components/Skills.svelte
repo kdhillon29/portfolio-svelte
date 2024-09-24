@@ -59,7 +59,7 @@
 		>
 			{#each skills as skill}
 				<div
-					class="border border-purple-900 p-6 rounded-lg bg-purple-900/20 shadow-lg
+					class="border border-purple-900 p-6 rounded-lg odd:bg-purple-500/20 bg-purple-900/20 shadow-lg
                                 w-full md:w-1/2"
 				>
 					<h3 class="text-xl font-bold mb-4 text-center">{skill.category}</h3>

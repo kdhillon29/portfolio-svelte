@@ -10,17 +10,16 @@
 
 	let ready = false;
 	import ProfileImg from '$lib/assets/design3.png?enhanced';
+	import MobileImg from '$lib/assets/mobileBg2.png?enhanced';
 	import internal from 'stream';
 	onMount(() => (ready = true));
 </script>
 
-<div class="   grid md:grid-cols-2 md:w-[90%] text-clamp mx-auto md:gap-12">
+<div class="  relative grid md:grid-cols-2 md:w-[90%] text-clamp mx-auto md:gap-12">
 	{#if ready}
-		<div
-			class=" max-sm:bg-gradient-to-tr from-primary-900 to-secondary-900 bg-blend-overlay hover:mix-blend-overlay"
-		>
+		<div class=" border-l-2 border-spacing-6 border-purple-600">
 			<div
-				class="  flex flex-col p-2 gap-4 md:gap-12 max-sm:ml-auto max-sm:bg-[url('/assets/images/waves.svg')] bg-cover bg-left"
+				class=" max-sm:absolute z-20 inset-y-0 max-sm:pt-16 text-justify p-3 gap-6 max-sm:bg-gradient-to-bl from-gray-900 to-slate-400/20 flex flex-col md:p-2 md:gap-12 max-sm:ml-auto bg-cover bg-blend-overlay"
 			>
 				<div
 					transition:fly={{
@@ -31,21 +30,22 @@
 						opacity: 0,
 						easing: quintOut
 					}}
-					class=" "
+					class=""
 				>
-					<!-- <h1 transition:fly="{{ delay: 250, duration: 3000, x: -200, y: 500, opacity: 0.5, easing: quintOut }}" >Welcome to Kanwar DHillon Portfolio</h1> -->
-
-					<div class="text-primary-300 text-md md:text-2xl w-full leading-6 md:tracking-wide p-2">
+					<div
+						class="  text-primary-600 text-xl font-semibold md:text-3xl w-1/2 md:w-full leading-6 md:tracking-wide p-2"
+					>
 						<p>
-							HEY, I AM<br class="max-sm:hidden" />
+							HEY, I AM<br />
 							<span class=" text-primary-600 py-2 font-semibold border-b-2 border-secondary-200"
 								>Kan Dhillon</span
 							>
 						</p>
+						<!-- <enhanced:img class=" w-48 md:hidden h-auto" src={MobileImg} alt="hero img" /> -->
 					</div>
 				</div>
 				<div
-					class=" flex flex-col gap-2 md:gap-3 md:w-3/4"
+					class=" flex p-2 flex-col gap-3 md:gap-6 md:w-3/4"
 					transition:fade={{ delay: 500, duration: 2000 }}
 				>
 					<span class=" font-semibold text-secondary-100">
@@ -66,8 +66,10 @@
 							>
 						</Typewriter><br />
 					</span>
-					<p class="  text-secondary-100 text-md md:text-xl tracking-wide leading-6">
-						I am a passionate web developer with over 3 years of experience in..
+					<p
+						class=" text-purple-100 font-semibold md:text-secondary-200 text-xl md:text-3xl text-pretty tracking-tight md:leading-8"
+					>
+						I am a passionate Front-End Developer with over 3 years of experience in..
 					</p>
 					<Typewriter {...{ mode: 'loop', element: 'b', delay: 100, unwriteInterval: 50 }}>
 						<b> HTML5,CSS3</b>
@@ -94,7 +96,7 @@
 			</div>
 		</div>
 		<div
-			class=" max-sm:hidden flex-shrink mt-[-10px]"
+			class=" max-sm:-order-1 height-auto flex-shrink md:mt-[-10px]"
 			transition:scale={{
 				delay: 1000,
 				duration: 2000,

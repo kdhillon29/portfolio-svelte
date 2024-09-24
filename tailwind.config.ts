@@ -12,6 +12,19 @@ export default {
 	],
 	theme: {
 		extend: {
+			animation: {
+				shimmer: 'shimmer 3s infinite'
+			},
+			keyframes: {
+				shimmer: {
+					'0%, 90%, 100%': {
+						'background-position': 'calc(-100% - var(--shimmer-width)) 0'
+					},
+					'30%, 60%': {
+						'background-position': 'calc(100% + var(--shimmer-width)) 0'
+					}
+				}
+			},
 			fontSize: {
 				clamp: 'clamp(1rem, 3vw, 2rem)'
 			}

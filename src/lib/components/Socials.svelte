@@ -6,7 +6,7 @@
 		Download CV
 	</button>
 
-	<div class="flex gap-6 flex-row text-4xl md:text-6xl text-primary-700 z-20">
+	<div class="flex gap-6 flex-row text-3xl md:text-5xl text-primary-700 z-20">
 		<a href="/">
 			<i class="fa-brands fa-github"></i>
 		</a>
