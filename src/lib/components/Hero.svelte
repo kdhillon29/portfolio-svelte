@@ -25,9 +25,9 @@
 				<div
 					transition:fly={{
 						delay: 250,
-						duration: 2000,
+						duration: 1000,
 						x: -100,
-						y: -200,
+						y: 0,
 						opacity: 0,
 						easing: quintOut
 					}}
@@ -46,7 +46,7 @@
 				</div>
 				<div
 					class=" flex flex-col gap-2 md:gap-3 md:w-3/4"
-					transition:fade={{ delay: 1000, duration: 2000 }}
+					transition:fade={{ delay: 500, duration: 2000 }}
 				>
 					<span class=" font-semibold text-secondary-100">
 						<Typewriter {...{ mode: 'loop', cursor: false, element: 'span' }}>
@@ -84,8 +84,8 @@
 					transition:scale={{
 						delay: 1500,
 						duration: 2000,
-						opacity: 0,
-						start: 0.8,
+						opacity: 0.1,
+						start: 0.2,
 						easing: quintOut
 					}}
 				>
@@ -96,9 +96,9 @@
 		<div
 			class=" max-sm:hidden flex-shrink mt-[-10px]"
 			transition:scale={{
-				delay: 1500,
-				duration: 1000,
-				opacity: 0.8,
+				delay: 1000,
+				duration: 2000,
+				opacity: 0.6,
 				start: 0.9,
 				easing: quintOut
 			}}

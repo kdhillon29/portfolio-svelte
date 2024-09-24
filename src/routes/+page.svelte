@@ -1,6 +1,6 @@
 <script>
-	import Hero from '../components/Hero.svelte';
-	import Skills from '../components/Skills.svelte';
+	import Hero from '$lib/components/Hero.svelte';
+	import Skills from '$lib/components/Skills.svelte';
 	// export const ssr = false;
 </script>
 
