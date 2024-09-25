@@ -13,29 +13,27 @@
 		// {name: '', link: ''},
 	];
 	import logo from '$lib/assets/logo2.png?enhanced';
+	import { LightSwitch } from '@skeletonlabs/skeleton';
 </script>
 
 <!-- <AppBar> -->
 <header
 	class={'sticky z-[10] top-0 duration-200 px-6 flex items-center justify-between border-b border-solid ' +
 		(y > 0
-			? ' py-2 bg-secondary-900/90 border-violet-950'
+			? ' py-2 bg-violet-900/90 border-violet-950'
 			: ' py-3 bg-transparent border-transparent')}
 >
 	<div class="">
 		<!-- <enhanced:img class="w-10 h-10 absolute z-[-10] left-2 top-1 animate-pulse" src={logo} /> -->
 		<a href="/"><Shinytext /></a>
 	</div>
+	<LightSwitch />
 	<button class="md:hidden text-xl" on:click={() => drawerStore.open()}>
 		<i class="fa-solid fa-bars size-8 md:hidden"></i>
 	</button>
 	<div class="md:flex items-center gap-4 hidden">
 		{#each tabs as tab, index}
-			<a
-				href={tab.link}
-				class="duration-200 hover:text-violet-400"
-				target={index === 2 ? '_blank' : ''}
-			>
+			<a href={tab.link} class="duration-200 hover:text-violet-400">
 				<p>{tab.name}</p>
 			</a>
 		{/each}

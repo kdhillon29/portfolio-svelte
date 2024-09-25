@@ -5,6 +5,7 @@
 	import SuperDebug from 'sveltekit-superforms';
 	import { getToastStore } from '@skeletonlabs/skeleton';
 	import type { ToastSettings } from '@skeletonlabs/skeleton';
+	import { fade } from 'svelte/transition';
 
 	const toastStore = getToastStore();
 
@@ -23,7 +24,10 @@
 <div
 	class=" max-w-6xl max-lg:max-w-3xl mx-auto bg-gradient-to-b from-secondary-900 to-primary-800 rounded-lg"
 >
-	<div class="grid md:grid-cols-2 items-start gap-2 md:gap-12 p-4">
+	<div
+		in:fade={{ delay: 200, duration: 2000 }}
+		class="grid md:grid-cols-2 items-start gap-2 md:gap-12 p-4"
+	>
 		<div class="">
 			<h1 class="text-xl md:text-4xl font-bold text-primary-200">Get in Touch</h1>
 			<p class="text-xs md:text-sm text-gray-300 mt-4 tracking-tight leading-3">

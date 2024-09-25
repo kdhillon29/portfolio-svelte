@@ -25,7 +25,7 @@
 	<slot>
 		<div class="flex justify-between text-xl md:text-3xl border-b p-2 shadow-lg rounded-xl">
 			<b class="skew-x-12">K</b>
-			<enhanced:img class="w-10 h-10 animate-pulse" src={logo} />
+			<enhanced:img class="w-8 h-8 animate-pulse" src={logo} />
 
 			<b class="text-violet-600 skew-y-12">D</b>
 		</div>

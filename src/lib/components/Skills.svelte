@@ -5,6 +5,7 @@
 	import nodejs from '$lib/assets/nodejs-icon.svg';
 	import nextjs from '$lib/assets/nextjs-icon.svg';
 	import tailwind from '$lib/assets/tailwindCss.png';
+	import { fade } from 'svelte/transition';
 
 	const skills = [
 		{
@@ -38,12 +39,13 @@
 	onMount(() =>
 		setInterval(() => {
 			inView = true;
-		}, 2000)
+		}, 1000)
 	);
 </script>
 
 <div
-	class="max-w-[650px] mx-auto flex flex-col justify-center p-4 text-gray-200 pb-8 md:py-12"
+	transition:fade={{ delay: 500, duration: 1000 }}
+	class="max-w-[650px] dark:text-secondary-50 text-secondary-700 flex flex-col justify-center mx-auto p-4 pb-8 md:py-12"
 	id="skills"
 >
 	{#if inView}

@@ -18,6 +18,7 @@
 	storeHighlightJs.set(hljs);
 	import Footer from '$lib/components/Footer.svelte';
 	import Header from '$lib/components/Header.svelte';
+	import { LightSwitch } from '@skeletonlabs/skeleton';
 
 	import { initializeStores, Drawer, Toast } from '@skeletonlabs/skeleton';
 	let y: number;
@@ -49,6 +50,7 @@
 	</div>
 
 	<Header {y} />
+	<!-- <div class="absolute top-0 right-0 z-50"><LightSwitch /></div> -->
 	<Drawer>
 		<Navigation />
 	</Drawer>
