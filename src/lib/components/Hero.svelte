@@ -18,7 +18,7 @@
 
 <div class="  relative grid md:grid-cols-2 md:w-[90%] text-clamp mx-auto md:gap-12">
 	{#if ready}
-		<div class=" border-l-2 border-spacing-6 border-purple-600">
+		<div class=" border-l-2 border-spacing-2 border-cyan-500">
 			<div
 				class=" max-sm:absolute z-20 inset-y-0 max-sm:pt-32 p-3 gap-2 max-sm:bg-gradient-to-bl from-gray-900/10 to-zinc-900 flex flex-col md:p-2 md:gap-12 bg-cover bg-blend-overlay"
 			>
@@ -34,55 +34,58 @@
 					class=""
 				>
 					<div
-						class=" flex text-primary-600 text-xl font-bold md:text-3xl w-2/3 md:w-full leading-6 md:tracking-wide p-2"
+						class=" flex text-primary-600 text-2xl font-bold md:text-3xl w-2/3 md:w-full leading-6 md:tracking-wide p-2"
 					>
 						<p class="">
-							Hey, I'm<br />
-							<span class=" text-primary-900 py-2 font-bold border-b-2 border-secondary-200"
-								>Kan
+							Hey, I'M<br />
+							<span class=" text-primary-400 py-2 font-bold border-b-2 border-secondary-200"
+								>Kan Dhillon
 							</span>
 							<!-- <i class="fa-solid fa-hand-wave w-16"></i> -->
-							<Typewriter
-								{...{ mode: 'loop', cursor: false, delay: 500, interval: 200, element: 'span' }}
-							>
-								<span
-									class="bg-gradient-to-br from-blue-500 to-cyan-300 bg-clip-text text-transparent box-decoration-clone"
-									>DESIGN.
-								</span>
-
-								<span
-									class="bg-gradient-to-br from-red-500 to-yellow-500 bg-clip-text text-transparent box-decoration-clone"
-									>BUILD.</span
-								>
-
-								<span
-									class="bg-gradient-to-br from-pink-500 to-violet-500 bg-clip-text text-transparent box-decoration-clone"
-									>DEPLOY.</span
-								>
-							</Typewriter>
 						</p>
 						<!-- <img class="w-8 h-8 text-primary-300 animate-shimmer" src={HandWave} alt="hand" /> -->
 					</div>
+					<div class=" animate-pulse text-center text-pretty text-xs p-2">
+						<span
+							class="bg-gradient-to-br from-blue-500 to-cyan-300 bg-clip-text text-transparent box-decoration-clone"
+							>DESIGN.
+						</span>
+
+						<span
+							class="bg-gradient-to-br from-red-500 to-yellow-500 bg-clip-text text-transparent box-decoration-clone"
+							>BUILD.</span
+						>
+
+						<span
+							class="bg-gradient-to-br from-pink-500 to-violet-500 bg-clip-text text-transparent box-decoration-clone"
+							>DEPLOY.</span
+						>
+					</div>
 				</div>
+
 				<div
 					class="tracking-wide max-sm:bg-slate-600/10"
-					transition:fade={{ delay: 500, duration: 2000 }}
+					transition:fade={{ delay: 500, duration: 1000 }}
 				>
 					<p
-						class=" dark:text-tertiary-600 font-bold text-secondary-500 text-2xl md:text-3xl p-4 leading-6 md:leading-10"
+						class=" dark:text-secondary-100 font-bold text-secondary-700 text-xl md:text-2xl tracking-wider"
 					>
-						<b class=""> I am a developer with over 3 years of experience in..</b>
-						<Typewriter {...{ mode: 'loop', element: 'b', delay: 200, unwriteInterval: 70 }}>
-							<b> HTML5</b>
-							<b> CSS3</b>
-							<b> JavaScript </b>
-							<b> Reactjs </b>
-							<b> NextJs </b>
-							<b> Svelte </b>
-							<b> NodeJs </b>
-							<b> Tailwind</b>
-							<b> Figma</b>
-						</Typewriter>
+						I am a developer with over 3 years of experience in...
+						<br /><span class="text-secondary-300">
+							<Typewriter
+								{...{ mode: 'loop', element: 'b', delay: 200, interval: 100, unwriteInterval: 70 }}
+							>
+								<b> HTML5</b>
+								<b> CSS3</b>
+								<b> JavaScript </b>
+								<b> Reactjs </b>
+								<b> NextJs </b>
+								<b> Svelte </b>
+								<b> NodeJs </b>
+								<b> Tailwind</b>
+								<b> Figma</b>
+							</Typewriter>
+						</span>
 					</p>
 				</div>
 				<div

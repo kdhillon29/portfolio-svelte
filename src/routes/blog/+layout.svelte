@@ -6,10 +6,7 @@
 	export const prerender = true;
 </script>
 
-<header>Hi, I'm a header</header>
-
+<h1 class="text-center p-4 bg-tertiary-700 w-2/3 mx-auto">Welcome to My Blog</h1>
 <main>
 	<slot />
 </main>
-
-<footer>Hello, I'm the footer.</footer>

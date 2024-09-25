@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { formatDate } from '$lib/utils';
 	import * as config from '$lib/config';
-
+	import { goto } from '$app/navigation';
 	export let data;
 </script>
 
@@ -11,9 +11,12 @@
 
 <!-- Posts -->
 <section>
-	<ul class="posts">
+	<ul class="posts grid md:grid-cols-3">
 		{#each data.posts as post}
-			<li class="post">
+			<li class="post flex flex-col gap-2">
+				{#if post.coverImage}
+					<img class="w-16 h-auto" src={post.coverImage} alt="thumbnail" />
+				{/if}
 				<a href={'/blog/' + post.slug} class="title">{post.title}</a>
 				<p class="date">{formatDate(post.date)}</p>
 				<p class="description">{post.description}</p>

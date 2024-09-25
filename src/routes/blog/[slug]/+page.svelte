@@ -2,6 +2,8 @@
 	import { formatDate } from '$lib/utils';
 
 	export let data;
+	$: coverImage = data.meta.coverImage;
+	console.log(data.meta.coverImage);
 </script>
 
 <!-- SEO -->
@@ -10,6 +12,7 @@
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content={data.meta.title} />
 </svelte:head>
+<button on:click={() => history.back()} type="button" class="btn p-2 variant-outline">Back</button>
 
 <article>
 	<!-- Title -->
@@ -27,7 +30,13 @@
 
 	<!-- Post -->
 	<div class="prose">
-		<svelte:component this={data.PostContent} />
+		<!-- <enhanced:img width="500" height="500" src={ProfileImg} alt="some alt text" /> -->
+		{#if coverImage}
+			<img loading="lazy" class=" w-2/3 h-auto" src={data.meta.coverImage} alt=" post img" />
+		{/if}
+		<div class="dark:text-secondary-200 text-gray-600 font-medium">
+			<svelte:component this={data.PostContent} />
+		</div>
 	</div>
 </article>
 

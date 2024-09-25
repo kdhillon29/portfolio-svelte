@@ -25,7 +25,15 @@
 >
 	<div class="">
 		<!-- <enhanced:img class="w-10 h-10 absolute z-[-10] left-2 top-1 animate-pulse" src={logo} /> -->
-		<a href="/"><Shinytext /></a>
+		<a href="/"
+			><Shinytext>
+				<div class="flex justify-between text-xl md:text-3xl border-b p-2 shadow-lg rounded-xl">
+					<b class="skew-x-12">K</b>
+
+					<b class="text-violet-600 skew-y-12">D</b>
+				</div></Shinytext
+			></a
+		>
 	</div>
 	<LightSwitch />
 	<button class="md:hidden text-xl" on:click={() => drawerStore.open()}>
