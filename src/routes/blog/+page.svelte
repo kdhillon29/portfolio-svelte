@@ -11,13 +11,13 @@
 
 <!-- Posts -->
 <section>
-	<ul class="posts grid md:grid-cols-3">
+	<ul class="posts grid md:grid-cols-3 mx-auto">
 		{#each data.posts as post}
 			<li class="post flex flex-col gap-2">
 				{#if post.coverImage}
-					<img class="w-16 h-auto" src={post.coverImage} alt="thumbnail" />
+					<img loading="lazy" class="w-32 h-auto" src={post.coverImage} alt="thumbnail" />
 				{/if}
-				<a href={'/blog/' + post.slug} class="title">{post.title}</a>
+				<a href={'/blog/' + post.slug} class="title text-xl anchor">{post.title}</a>
 				<p class="date">{formatDate(post.date)}</p>
 				<p class="description">{post.description}</p>
 			</li>
