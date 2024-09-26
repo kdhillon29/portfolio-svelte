@@ -4,7 +4,8 @@
 
 <style>
 	.callout {
-		@apply bg-secondary-200;
+		@apply bg-secondary-300;
+		@apply dark:text-primary-700;
 		padding: 2rem 1rem;
 		width: calc(100% + 2rem);
 		max-width: unset;

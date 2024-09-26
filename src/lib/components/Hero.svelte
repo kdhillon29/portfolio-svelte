@@ -20,7 +20,7 @@
 	{#if ready}
 		<div class=" border-l-2 border-spacing-2 border-cyan-500">
 			<div
-				class=" max-sm:absolute z-20 inset-y-0 max-sm:pt-32 p-3 gap-2 max-sm:bg-gradient-to-bl from-gray-900/10 to-zinc-900 flex flex-col md:p-2 md:gap-12 bg-cover bg-blend-overlay"
+				class=" max-sm:absolute z-20 inset-y-0 max-sm:pt-32 gap-2 max-sm:bg-gradient-to-bl from-gray-900/20 to-zinc-900/10 flex flex-col md:p-2 md:gap-12 bg-cover bg-blend-overlay"
 			>
 				<div
 					transition:fly={{
@@ -37,7 +37,7 @@
 						class=" flex text-primary-600 text-2xl font-bold md:text-3xl w-2/3 md:w-full leading-6 md:tracking-wide p-2"
 					>
 						<p class="">
-							Hey, I'M<br />
+							Hey, I'M👋<br />
 							<span class=" text-primary-400 py-2 font-bold border-b-2 border-secondary-200"
 								>Kan Dhillon
 							</span>
@@ -45,7 +45,7 @@
 						</p>
 						<!-- <img class="w-8 h-8 text-primary-300 animate-shimmer" src={HandWave} alt="hand" /> -->
 					</div>
-					<div class=" animate-pulse text-center text-pretty text-xs p-2">
+					<div class=" animate-pulse text-pretty text-xs p-2">
 						<span
 							class="bg-gradient-to-br from-blue-500 to-cyan-300 bg-clip-text text-transparent box-decoration-clone"
 							>DESIGN.
@@ -64,12 +64,10 @@
 				</div>
 
 				<div
-					class="tracking-wide max-sm:bg-slate-600/10"
-					transition:fade={{ delay: 500, duration: 1000 }}
+					class="tracking-wide leading-7 max-sm:bg-slate-600/10"
+					transition:fade={{ delay: 500, duration: 1500 }}
 				>
-					<p
-						class=" dark:text-secondary-100 font-bold text-secondary-700 text-xl md:text-2xl tracking-wider"
-					>
+					<p class=" dark:text-secondary-100 font-bold text-violet-500 text-2xl md:text-4xl">
 						I am a developer with over 3 years of experience in...
 						<br /><span class="text-secondary-300">
 							<Typewriter

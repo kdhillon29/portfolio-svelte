@@ -1,5 +1,5 @@
 ---
-title: 'Automatic heading links in mdsvex'
+title: 'Heading links in mdsvex'
 date: '2023-10-26'
 updated: '2024-10-26'
 published: true
@@ -8,7 +8,7 @@ categories:
   - 'markdown'
 coverImage: '/assets/images/bgLogo1.png'
 
-description: Check out how heading links work with this starter in this post.
+description: How Heading Links works.
 ---
 
 While many guides on the internet attempt to teach HTML using a lot of mind-boggling theory, this tutorial will instead focus on giving you the practical skills to build your first site.

@@ -14,6 +14,8 @@ author: 'Kan Dhillon'
 
 <script>
 import Callout from '$lib/components/Callout.svelte';
+   import { CodeBlock } from '@skeletonlabs/skeleton';
+
 </script>
 
 SvelteKit is an officially supported framework, built around Svelte. It adds key features to a Svelte app — such as routing, layouts and server-side rendering — and makes frontend development outrageously simple.
@@ -22,11 +24,14 @@ In this tutorial, we’ll take a beginner-friendly look at both Svelte and Svelt
 
 However, the biggest advantage SvelteKit has to offer is its ease of use. Of course, we can manually set up our build process from scratch with all these features, but this can be tedious and frustrating. SvelteKit makes it as easy as possible for us, and the best way to experience this is by actually using it.
 
-```ts
-//svelte component
-<script>
-	let name = 'world';
-</script>
+<CodeBlock language="js" code={`const skeleton: string = 'awesome';`}/>
 
-<h1>Hello {name}!</h1>
-```
+<CodeBlock
+language="ts"
+code ={`
+//svelte component
+
+<script>
+let name = 'world';
+</script\>
+<h1>Hello {name}!</h1>`}/>

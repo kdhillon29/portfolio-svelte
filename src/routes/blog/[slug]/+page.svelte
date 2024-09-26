@@ -15,23 +15,33 @@
 	<meta property="og:description" content={data.meta.description} />
 </svelte:head>
 
-<article>
+<article class="flex flex-col">
 	<!-- Title -->
-	<section class="flex justify-between gap-6 mb-6">
-		<div class="flex flex-col gap-4">
+	<section class="flex flex-col p-2 justify-start gap-1 md:gap-2">
+		<div class="flex flex-col justify-center items-center gap-4">
 			{#if coverImage}
-				<img loading="lazy" class=" w-64 h-auto" src={data.meta.coverImage} alt=" post img" />
+				<img
+					loading="lazy"
+					class=" w-full md:w-[60%] h-36 md:h-52 mx-auto"
+					src={data.meta.coverImage}
+					alt=" post img"
+				/>
 			{/if}
-			<h3>{data.meta.title}</h3>
-			<p>Published at {formatDate(data.meta.date)}</p>
+			<b>{data.meta.title}</b>
 		</div>
-		<hgroup class="flex gap-2 flex-col mt-6">
-			<Avatar background="bg-secondary-500">{data.meta.author?.split('')[0] || 'D'}</Avatar>
-			<small>{data.meta.author || 'Dhillon'}</small>
+		<hgroup class="flex justify-center mt-3 gap-12">
+			<span class="">
+				<Avatar width="w-10" background="bg-secondary-500"
+					>{data.meta.author?.split('')[0] || 'KD'}</Avatar
+				>
+
+				<small>Published:{formatDate(data.meta.date)}</small>
+				<!-- <small>{data.meta.author || 'Dhillon'}</small> -->
+			</span>
 			<!-- Tags -->
-			<div class="tags my-2">
+			<div class="tags w-full md:w-1/3 md:my-2">
 				{#each data.meta.categories as category}
-					<span class=" p-1 mr-2 badge variant-filled">&num;{category}</span>
+					<small class="badge m-1 variant-filled">&num;{category}</small>
 					<!-- <span class="surface-4">&num;{category}</span> -->
 				{/each}
 			</div>
@@ -39,11 +49,12 @@
 	</section>
 
 	<!-- Post -->
-	<div class="prose">
-		<!-- <enhanced:img width="500" height="500" src={ProfileImg} alt="some alt text" /> -->
-		<div class="dark:text-secondary-200 text-gray-600 font-medium">
-			<svelte:component this={data.PostContent} />
-		</div>
+
+	<!-- <enhanced:img width="500" height="500" src={ProfileImg} alt="some alt text" /> -->
+	<div
+		class="dark:text-secondary-200 text-gray-900 leading-7 tracking-wide w-[80%] mx-auto font-medium"
+	>
+		<svelte:component this={data.PostContent} />
 	</div>
 </article>
 

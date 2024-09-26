@@ -1,6 +1,6 @@
 <div class="flex flex-row items-center text-md md:text-xl gap-6 mb-6 md:mb-0">
 	<button
-		class="z-10 cursor-pointer dark:bg-secondary-300 dark:text-primary-300 font-bold text-primary-700 tracking-wide md:w-auto p-3 border
+		class="z-10 cursor-pointer dark:bg-secondary-200 dark:text-primary-600 bg-secondary-300 text-primary-600 font-bold tracking-wide md:w-auto p-3 border
                                      border-primary-500 rounded-xl hover:scale-[1.1] transition-all delay-75 ease-linear"
 	>
 		Download CV
