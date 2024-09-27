@@ -6,7 +6,7 @@ published: true
 categories:
   - 'sveltekit'
   - 'markdown'
-coverImage: '/assets/images/bgLogo1.png'
+coverImage: '/assets/images/heading-bg.jpeg'
 
 description: How Heading Links works.
 ---
