@@ -21,6 +21,8 @@
 	import { LightSwitch } from '@skeletonlabs/skeleton';
 
 	import { initializeStores, Drawer, Toast } from '@skeletonlabs/skeleton';
+	import { onMount } from 'svelte';
+	import { Img } from 'svelte-email';
 	let y: number;
 	let innerWidth = 0;
 	let innerHeight = 0;
@@ -32,6 +34,8 @@
 	}
 
 	initializeStores();
+	let loading = true;
+	onMount(() => (loading = false));
 </script>
 
 <div
@@ -54,6 +58,13 @@
 	<Drawer>
 		<Navigation />
 	</Drawer>
+	{#if loading}
+		<img
+			class=" animate-spin inset-0 top-20 w-16 h-16 mx-auto"
+			src="/assets/images/loader-icon.png"
+			alt="loader"
+		/>
+	{/if}
 	<slot />
 	<Toast />
 	<Footer />

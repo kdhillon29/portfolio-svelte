@@ -49,7 +49,7 @@
 							data-original="#000000"
 						/>
 					</svg>
-					<a href="#/" class="text-white text-sm ml-1"> info@example.com </a>
+					<a href="#/" class="text-white text-sm ml-1">kdhillon469@gmail.com </a>
 				</li>
 				<li class="flex items-center">
 					<svg
@@ -64,7 +64,7 @@
 							data-original="#000000"
 						></path>
 					</svg>
-					<a href="#/" class="text-white text-sm ml-1"> +158 996 888 </a>
+					<a href="#/" class="text-white text-sm ml-1"> +61416648482 </a>
 				</li>
 				<li class="flex items-center">
 					<svg
@@ -83,7 +83,7 @@
 							data-original="#000000"
 						></path>
 					</svg>
-					<a href="#/" class="text-white text-sm ml-2"> 123 Street 256 House </a>
+					<a href="#/" class="text-white text-sm ml-2"> 123 George St Sydney</a>
 				</li>
 			</ul>
 
@@ -146,18 +146,13 @@
 		</div>
 
 		<div class="bg-primary-500/70 p-2 md:p-6 rounded-lg w-full">
-			<!-- <h2 class="text-xl md:text-3xl text-center font-semibold text-secondary-200">
-				Contact 
-			</h2> -->
-			<!-- {$message && toastStore.trigger({ message: $message })} -->
-
 			<!-- <SuperDebug data={$form} /> -->
-			<form method="post" use:enhance class="mt-8 space-y-4 text-secondary-100">
+			<form method="post" use:enhance class=" mt-8 space-y-4">
 				<input
 					type="text"
 					placeholder="Name"
 					name="name"
-					class="w-full text-secondary-100 input rounded-lg py-3 px-4 text-sm outline-[#a91079]"
+					class="w-full input rounded-lg py-3 px-4 text-sm"
 					aria-invalid={$errors.name ? 'true' : undefined}
 					bind:value={$form.name}
 					{...$constraints.name}
@@ -178,7 +173,7 @@
 					type="text"
 					placeholder="Phone"
 					name="phone"
-					class="w-full input rounded-lg py-3 px-4 text-sm outline-[#a91079]"
+					class="w-full input rounded-lg py-3 px-4 text-sm outline-[#f9e8f4]"
 					aria-invalid={$errors.phone ? 'true' : undefined}
 					bind:value={$form.phone}
 					{...$constraints.phone}
@@ -200,7 +195,7 @@
 					placeholder="Message"
 					rows="6"
 					name="message"
-					class="w-full input rounded-lg px-4 text-sm pt-3 outline-[#a91079]"
+					class="w-full input rounded-lg px-4 text-sm pt-3"
 					aria-invalid={$errors.message ? 'true' : undefined}
 					bind:value={$form.message}
 					{...$constraints.message}

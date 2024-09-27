@@ -18,9 +18,11 @@
 
 <div class="  relative grid md:grid-cols-2 md:w-[90%] text-clamp mx-auto md:gap-12">
 	{#if ready}
-		<div class=" border-l-2 border-spacing-2 border-cyan-500">
+		<div
+			class=" border-l-2 border-spacing-2 border-cyan-500 max-sm:dark:bg-slate-600 max-sm:bg-slate-500"
+		>
 			<div
-				class=" max-sm:absolute z-20 inset-y-0 max-sm:pt-32 gap-2 max-sm:bg-gradient-to-bl from-gray-900/20 to-zinc-900/10 flex flex-col md:p-2 md:gap-12 bg-cover bg-blend-overlay"
+				class="w-full z-20 max-sm:pt-6 gap-6 max-sm:bg-[url('/assets/images/design3.png')] flex flex-col py-6 md:gap-12 bg-fixed bg-blend-screen"
 			>
 				<div
 					transition:fly={{
@@ -38,38 +40,21 @@
 					>
 						<p class="">
 							Hey, I'M👋<br />
-							<span class=" text-primary-400 py-2 font-bold border-b-2 border-secondary-200"
+							<span class=" text-primary-600 py-2 font-bold border-b-2 border-secondary-200"
 								>Kan Dhillon
 							</span>
 							<!-- <i class="fa-solid fa-hand-wave w-16"></i> -->
 						</p>
 						<!-- <img class="w-8 h-8 text-primary-300 animate-shimmer" src={HandWave} alt="hand" /> -->
 					</div>
-					<div class=" animate-pulse text-pretty text-xs p-2">
-						<span
-							class="bg-gradient-to-br from-blue-500 to-cyan-300 bg-clip-text text-transparent box-decoration-clone"
-							>DESIGN.
-						</span>
-
-						<span
-							class="bg-gradient-to-br from-red-500 to-yellow-500 bg-clip-text text-transparent box-decoration-clone"
-							>BUILD.</span
-						>
-
-						<span
-							class="bg-gradient-to-br from-pink-500 to-violet-500 bg-clip-text text-transparent box-decoration-clone"
-							>DEPLOY.</span
-						>
-					</div>
 				</div>
 
-				<div
-					class="tracking-wide leading-7 max-sm:bg-slate-600/10"
-					transition:fade={{ delay: 500, duration: 1500 }}
-				>
-					<p class=" dark:text-secondary-100 font-bold text-violet-500 text-2xl md:text-4xl">
-						I am a developer with over 3 years of experience in...
-						<br /><span class="text-secondary-300">
+				<div class="p-2 mt-6" transition:fade={{ delay: 500, duration: 1500 }}>
+					<p
+						class="dark:text-primary-600 font-bold text-warning-700 text-2xl md:text-3xl tracking-tighter"
+					>
+						I am a Front-End Developer with over 3 years of experience in...
+						<br /><span class="dark:text-teritary-900 text-tertiary-300">
 							<Typewriter
 								{...{ mode: 'loop', element: 'b', delay: 200, interval: 100, unwriteInterval: 70 }}
 							>
@@ -85,6 +70,22 @@
 							</Typewriter>
 						</span>
 					</p>
+					<div class="mt-6 font-bold text-xl md:text-2xl">
+						<span
+							class="bg-gradient-to-br from-blue-500 to-cyan-300 bg-clip-text text-transparent box-decoration-clone"
+							>Design.
+						</span>
+
+						<span
+							class="bg-gradient-to-br from-red-500 to-yellow-500 bg-clip-text text-transparent box-decoration-clone"
+							>Build.</span
+						>
+
+						<span
+							class="bg-gradient-to-br from-pink-500 to-violet-500 bg-clip-text text-transparent box-decoration-clone"
+							>Deploy.</span
+						>
+					</div>
 				</div>
 				<div
 					transition:scale={{
@@ -100,7 +101,7 @@
 			</div>
 		</div>
 		<div
-			class=" max-sm:-order-1 height-auto flex-shrink md:mt-[-10px]"
+			class=" hidden max-md:-order-1 md:block height-auto flex-shrink md:mt-[-10px]"
 			transition:scale={{
 				delay: 1000,
 				duration: 2000,
