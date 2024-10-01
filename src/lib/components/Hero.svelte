@@ -19,7 +19,7 @@
 <div class="  relative grid md:grid-cols-2 md:w-[90%] text-clamp mx-auto md:gap-12">
 	{#if ready}
 		<div
-			class=" border-l-2 border-spacing-2 border-cyan-500 max-sm:dark:bg-slate-600 max-sm:bg-slate-500"
+			class=" md:border-l-2 border-spacing-2 border-cyan-500 max-sm:dark:bg-slate-600 max-sm:bg-slate-500"
 		>
 			<div
 				class="w-full z-20 max-sm:pt-6 gap-6 max-sm:bg-[url('/assets/images/design3.png')] flex flex-col py-6 md:gap-12 bg-fixed bg-blend-screen"
